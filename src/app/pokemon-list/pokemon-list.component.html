@@ -1,0 +1,24 @@
+<div class="columns">
+    <div *ngFor="let pokemon of pokemonsArray">
+        <div class="card" id="singlePokeCard">
+            <img [src]="pokemon.sprites.front_default" alt="Pokemon">
+            <h3 style="text-transform:capitalize">{{ pokemon.name }}</h3>
+            <p style="text-transform:capitalize" id="pokeType"> Type: {{ pokemon.types[0].type.name }}</p>
+            <a routerLink="/details" routerLinkActive="active" class="btn-primary">More Details</a>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="container">
+    <div class="row" *ngFor="let pokemon of pokemonsArray">
+            <div class="col-sm">
+                <div class="card">
+                    <img [src]="pokemon.sprites.front_default" alt="Pokemon">
+                    <h3>{{ pokemon.name }}</h3>
+                    <p>Type: {{ pokemon.types[0].type.name }}</p>
+                    <a routerLink="/details" routerLinkActive="active" class="btn-primary">More Details</a>
+                </div>
+            </div>
+    </div>
+</div> -->
+  
